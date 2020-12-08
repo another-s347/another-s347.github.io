@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["DefaultPipeconf",""],["PipeconfID",""]],"trait":[["Pipeconf",""]]});

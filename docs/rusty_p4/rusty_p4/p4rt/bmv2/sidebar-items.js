@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Bmv2Event",""],["Bmv2SwitchConnectionStatus",""]],"struct":[["Bmv2ConnectionOption",""],["Bmv2Manager",""],["Bmv2MasterUpdateOption",""],["Bmv2SwitchConnection",""]]});

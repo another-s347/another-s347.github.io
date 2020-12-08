@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["FieldMatchType",""]],"struct":[["Exact","Matches can be performed on arbitrarily-large inputs; the protobuf type 'bytes' is used to model arbitrarily-large values."],["Lpm",""],["Range","A Range is logically a set that contains all values numerically between 'low' and 'high' inclusively."],["Ternary",""]]});

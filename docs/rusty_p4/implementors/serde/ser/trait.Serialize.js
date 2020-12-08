@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["rusty_p4"] = [{"text":"impl Serialize for PipeconfID","synthetic":false,"types":[]},{"text":"impl Serialize for Device","synthetic":false,"types":[]},{"text":"impl Serialize for DeviceID","synthetic":false,"types":[]},{"text":"impl Serialize for DeviceType","synthetic":false,"types":[]},{"text":"impl Serialize for Port","synthetic":false,"types":[]},{"text":"impl Serialize for Interface","synthetic":false,"types":[]},{"text":"impl Serialize for ConnectPoint","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

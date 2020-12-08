@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["rusty_p4"] = [{"text":"impl Display for ContextErrorKind","synthetic":false,"types":[]},{"text":"impl Display for ContextError","synthetic":false,"types":[]},{"text":"impl Display for ConnectionErrorKind","synthetic":false,"types":[]},{"text":"impl Display for ConnectionError","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

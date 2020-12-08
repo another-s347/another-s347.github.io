@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["rusty_p4"] = [{"text":"impl From&lt;ContextErrorKind&gt; for ContextError","synthetic":false,"types":[]},{"text":"impl From&lt;Context&lt;ContextErrorKind&gt;&gt; for ContextError","synthetic":false,"types":[]},{"text":"impl From&lt;ConnectionErrorKind&gt; for ConnectionError","synthetic":false,"types":[]},{"text":"impl From&lt;Context&lt;ConnectionErrorKind&gt;&gt; for ConnectionError","synthetic":false,"types":[]},{"text":"impl From&lt;u16&gt; for ArpOp","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
