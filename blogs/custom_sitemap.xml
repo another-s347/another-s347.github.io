@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <title></title>
-    <loc>http://another-s347.github.io/blogs/2021/01/05/async-pyo3-1/</loc>
+    <title>使用PyO3跨越编程语言的异步</title>
+    <loc>http://another-s347.github.io/blogs/2021/01/01/async-pyo3-1/</loc>
     
-    <lastmod>1609856667930</lastmod>
+    <lastmod>1609859438225</lastmod>
     
   </url>
   
@@ -13,7 +13,7 @@
     <title></title>
     <loc>http://another-s347.github.io/blogs/2021/01/05/dummy/</loc>
     
-    <lastmod>1609856649926</lastmod>
+    <lastmod>1609859415394</lastmod>
     
   </url>
   
