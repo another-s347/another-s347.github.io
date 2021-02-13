@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Details","Used by the server to convey additional information about the error. One of the fields must be set (so that the client can identify which type of stream message triggered the error), but that field may be set to its default value."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["install",""]],"struct":[["DefaultAppStore","The default implementation of `AppStore` which should just works."]],"trait":[["AppStore","The trait defines how should we store many apps."]]});

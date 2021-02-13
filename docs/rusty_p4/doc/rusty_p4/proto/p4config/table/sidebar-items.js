@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["IdleTimeoutBehavior","this enum can be extended in the future with other behaviors, such as \"HARD_EVICTION\""]]});

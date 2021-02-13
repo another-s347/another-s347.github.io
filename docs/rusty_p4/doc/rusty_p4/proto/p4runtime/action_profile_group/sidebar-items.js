@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["member","Nested message and enum types in `Member`."]],"struct":[["Member",""]]});

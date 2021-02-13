@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["SdnType","The object is either represented as an unsigned integer with a bitwidth of `sdn_bitwidth`, or as a string."]],"struct":[["SdnString",""]]});
