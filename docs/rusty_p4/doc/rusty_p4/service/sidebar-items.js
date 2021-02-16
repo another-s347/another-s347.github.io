@@ -1,1 +1,1 @@
-initSidebarItems({});
+initSidebarItems({"mod":[["request",""],["server",""],["tower_service",""]],"struct":[["ServiceBus",""]],"trait":[["Service","`Service` is used to expose an application to various northbound api. The app implement the trait `Service` to `process` request and produce a stream of response. Northbound api might be implemented as multiple different backend. The service is compatiable to tower eco system."]]});

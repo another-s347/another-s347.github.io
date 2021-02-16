@@ -85,9 +85,9 @@
 
     <span class="kw">fn</span> <span class="ident">get</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">App</span> <span class="op">+</span> <span class="ident">Clone</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>;
 
-    <span class="kw">fn</span> <span class="ident">store_handler</span><span class="op">&lt;</span><span class="ident">T</span>, <span class="ident">E</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">app</span>: <span class="ident">T</span>) <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>,<span class="ident">E</span>:<span class="lifetime">&#39;static</span>;
+    <span class="comment">// fn store_handler&lt;T, E&gt;(&amp;mut self, app: T) where T: Handler&lt;E&gt;,E:&#39;static;</span>
 
-    <span class="kw">fn</span> <span class="ident">get_handlers</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="kw">crate</span>::<span class="ident">util</span>::<span class="ident">publisher</span>::<span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="kw">where</span> <span class="ident">E</span>:<span class="lifetime">&#39;static</span>;
+    <span class="comment">// fn get_handlers&lt;E&gt;(&amp;self) -&gt; Vec&lt;Arc&lt;dyn crate::util::publisher::Handler&lt;E&gt;&gt;&gt; where E:&#39;static;</span>
 }
 
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">install</span><span class="op">&lt;</span><span class="ident">S</span>, <span class="ident">T</span><span class="op">&gt;</span>(<span class="ident">store</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">S</span>, <span class="ident">option</span>: <span class="ident">T</span>::<span class="prelude-ty">Option</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Arc</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span>
@@ -98,12 +98,12 @@
     <span class="prelude-val">Some</span>(<span class="ident">store</span>.<span class="ident">store</span>(<span class="ident">app</span>))
 }
 
-<span class="doccomment">/// The default implementation of `AppStore` which should just works.</span>
+<span class="doccomment">/// The default implementation of `AppStore` which should just work.</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Default</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">DefaultAppStore</span> {
     <span class="kw">pub</span> <span class="ident">map</span>: <span class="ident">HashMap</span><span class="op">&lt;</span><span class="ident">TypeId</span>, <span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">Any</span> <span class="op">+</span> <span class="ident">Send</span> <span class="op">+</span> <span class="ident">Sync</span><span class="op">&gt;</span><span class="op">&gt;</span>,
-    <span class="kw">pub</span> <span class="ident">handler_map</span>: <span class="ident">HashMap</span><span class="op">&lt;</span><span class="ident">TypeId</span>, <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">Any</span><span class="op">+</span><span class="ident">Send</span><span class="op">+</span><span class="ident">Sync</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>,
-    <span class="kw">pub</span> <span class="ident">join_handle</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">BoxFuture</span><span class="op">&lt;</span><span class="lifetime">&#39;static</span>, ()<span class="op">&gt;</span><span class="op">&gt;</span>
+    <span class="comment">// pub handler_map: HashMap&lt;TypeId, Vec&lt;Arc&lt;dyn Any+Send+Sync&gt;&gt;&gt;,</span>
+    <span class="comment">// pub join_handle: Vec&lt;BoxFuture&lt;&#39;static, ()&gt;&gt;</span>
 }
 
 <span class="kw">impl</span> <span class="ident">AppStore</span> <span class="kw">for</span>  <span class="ident">DefaultAppStore</span> {
@@ -124,20 +124,20 @@
         }))
     }
 
-    <span class="kw">fn</span> <span class="ident">store_handler</span><span class="op">&lt;</span><span class="ident">T</span>, <span class="ident">E</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">app</span>: <span class="ident">T</span>) <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>,<span class="ident">E</span>:<span class="lifetime">&#39;static</span> {
-        <span class="kw">let</span> <span class="ident">a</span> <span class="op">=</span> <span class="ident">Arc</span>::<span class="ident">new</span>(<span class="ident">app</span>) <span class="kw">as</span> <span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+    <span class="comment">// fn store_handler&lt;T, E&gt;(&amp;mut self, app: T) where T: Handler&lt;E&gt;,E:&#39;static {</span>
+    <span class="comment">//     let a = Arc::new(app) as Arc&lt;dyn Handler&lt;E&gt;&gt;;</span>
 
-        <span class="kw">let</span> <span class="ident">a</span> <span class="op">=</span> <span class="ident">Arc</span>::<span class="ident">new</span>(<span class="ident">a</span>) <span class="kw">as</span> <span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">Any</span> <span class="op">+</span> <span class="ident">Send</span> <span class="op">+</span> <span class="ident">Sync</span><span class="op">&gt;</span>;
-        <span class="self">self</span>.<span class="ident">handler_map</span>.<span class="ident">insert</span>(<span class="ident">TypeId</span>::<span class="ident">of</span>::<span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>(), <span class="macro">vec</span><span class="macro">!</span>[<span class="ident">a</span>]);
-    }
+    <span class="comment">//     let a = Arc::new(a) as Arc&lt;dyn Any + Send + Sync&gt;;</span>
+    <span class="comment">//     self.handler_map.insert(TypeId::of::&lt;E&gt;(), vec![a]);</span>
+    <span class="comment">// }</span>
 
-    <span class="kw">fn</span> <span class="ident">get_handlers</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="kw">crate</span>::<span class="ident">util</span>::<span class="ident">publisher</span>::<span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="kw">where</span> <span class="ident">E</span>:<span class="lifetime">&#39;static</span> {
-        <span class="kw">let</span> <span class="ident">a</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">handler_map</span>.<span class="ident">get</span>(<span class="kw-2">&amp;</span><span class="ident">TypeId</span>::<span class="ident">of</span>::<span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span>()).<span class="ident">unwrap</span>();
-        <span class="ident">a</span>.<span class="ident">iter</span>().<span class="ident">filter_map</span>(<span class="op">|</span><span class="ident">x</span><span class="op">|</span>{
-            <span class="ident">x</span>.<span class="ident">clone</span>().<span class="ident">downcast</span>::<span class="op">&lt;</span><span class="ident">Arc</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="kw">crate</span>::<span class="ident">util</span>::<span class="ident">publisher</span>::<span class="ident">Handler</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">x</span><span class="op">|</span>{
-                <span class="ident">x</span>.<span class="ident">as_ref</span>().<span class="ident">clone</span>()
-            }).<span class="ident">ok</span>()
-        }).<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span><span class="op">&gt;</span>()
-    }
+    <span class="comment">// fn get_handlers&lt;E&gt;(&amp;self) -&gt; Vec&lt;Arc&lt;dyn crate::util::publisher::Handler&lt;E&gt;&gt;&gt; where E:&#39;static {</span>
+    <span class="comment">//     let a = self.handler_map.get(&amp;TypeId::of::&lt;E&gt;()).unwrap();</span>
+    <span class="comment">//     a.iter().filter_map(|x|{</span>
+    <span class="comment">//         x.clone().downcast::&lt;Arc&lt;dyn crate::util::publisher::Handler&lt;E&gt;&gt;&gt;().map(|x|{</span>
+    <span class="comment">//             x.as_ref().clone()</span>
+    <span class="comment">//         }).ok()</span>
+    <span class="comment">//     }).collect::&lt;Vec&lt;_&gt;&gt;()</span>
+    <span class="comment">// }</span>
 }</pre></div>
 </section><section id="search" class="content hidden"></section><section class="footer"></section><script>window.rootPath = "../../../";window.currentCrate = "rusty_p4";</script><script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script><script defer src="../../../search-index.js"></script></body></html>

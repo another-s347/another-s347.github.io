@@ -242,6 +242,8 @@
 <span id="239">239</span>
 <span id="240">240</span>
 <span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">collections</span>::{<span class="ident">HashMap</span>, <span class="ident">HashSet</span>};
 <span class="kw">use</span> <span class="ident">async_trait</span>::<span class="ident">async_trait</span>;
@@ -364,6 +366,8 @@
     <span class="kw">type</span> <span class="ident">Dependency</span> <span class="op">=</span> <span class="macro">tuple_list_type</span><span class="macro">!</span>(<span class="kw">crate</span>::<span class="ident">app</span>::<span class="ident">device_manager</span>::<span class="ident">DeviceManager</span>);
 
     <span class="kw">type</span> <span class="prelude-ty">Option</span> <span class="op">=</span> ();
+
+    <span class="kw">const</span> <span class="ident">Name</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">str</span> <span class="op">=</span> <span class="string">&quot;CommonState&quot;</span>;
 
     <span class="kw">fn</span> <span class="ident">init</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(<span class="ident">dependencies</span>: <span class="self">Self</span>::<span class="ident">Dependency</span>, <span class="ident">store</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">S</span>, <span class="ident">option</span>: <span class="self">Self</span>::<span class="prelude-ty">Option</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> <span class="kw">where</span> <span class="ident">S</span>: <span class="kw">super</span>::<span class="ident">store</span>::<span class="ident">AppStore</span> {
         <span class="kw">let</span> <span class="macro">tuple_list</span><span class="macro">!</span>(<span class="ident">device_manager</span>) <span class="op">=</span> <span class="ident">dependencies</span>;
