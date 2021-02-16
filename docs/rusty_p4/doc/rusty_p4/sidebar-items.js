@@ -1,1 +1,1 @@
-initSidebarItems({"macro":[["flow",""],["flow_match",""]],"mod":[["app",""],["entity",""],["error",""],["event",""],["gnmi",""],["p4rt",""],["proto",""],["representation",""],["service",""],["system",""],["util",""]]});
+initSidebarItems({"macro":[["flow",""],["flow_match",""]],"mod":[["util",""]]});

@@ -25,12 +25,9 @@
 <span id="22">22</span>
 <span id="23">23</span>
 <span id="24">24</span>
-<span id="25">25</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#![<span class="ident">allow</span>(<span class="ident">warnings</span>)]</span>
 <span class="attribute">#![<span class="ident">recursion_limit</span> <span class="op">=</span> <span class="string">&quot;512&quot;</span>]</span>
-<span class="attribute">#[<span class="ident">macro_use</span>]</span>
-<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">failure</span>;
 
 <span class="kw">use</span> <span class="ident">proc_macro_hack</span>::<span class="ident">proc_macro_hack</span>;
 
@@ -40,17 +37,18 @@
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">macro_impl</span>::<span class="ident">flow_match</span>;
 <span class="comment">//#[macro_use]</span>
 <span class="comment">//pub mod exported_macro;</span>
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">app</span>;
-<span class="comment">// pub mod core;</span>
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">entity</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">error</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">event</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">p4rt</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proto</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">representation</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">service</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">util</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gnmi</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">system</span>;
+<span class="comment">// pub mod app;</span>
+<span class="comment">// // pub mod core;</span>
+<span class="comment">// pub mod entity;</span>
+<span class="comment">// pub mod error;</span>
+<span class="comment">// pub mod event;</span>
+<span class="comment">// pub mod p4rt;</span>
+<span class="comment">// pub mod proto;</span>
+<span class="comment">// pub mod representation;</span>
+<span class="comment">// pub mod service;</span>
+<span class="comment">// pub mod util;</span>
+<span class="comment">// pub mod gnmi;</span>
+<span class="comment">// pub mod system;</span>
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">rusty_p4_core</span>::<span class="ident">util</span>;
 </pre></div>
 </section><section id="search" class="content hidden"></section><section class="footer"></section><script>window.rootPath = "../../";window.currentCrate = "rusty_p4";</script><script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script><script defer src="../../search-index.js"></script></body></html>

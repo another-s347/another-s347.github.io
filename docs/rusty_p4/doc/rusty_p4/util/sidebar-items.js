@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["hash",""]],"mod":[["flow",""],["packet",""],["publisher",""],["value",""]],"struct":[["FinishSignal",""]]});
+initSidebarItems({"fn":[["hash",""]],"mod":[["flow",""],["publisher",""],["value",""]],"struct":[["FinishSignal",""]]});
