@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["CommonEvents",""],["CoreEvent","Event indicates that something happened. It shouldn't change the state of Core and Context"],["CoreRequest","Event indicates that something will happen. It may change the state of Core and Context"],["NorthboundArgType",""]],"struct":[["NorthboundRequest",""],["PacketReceived",""]],"trait":[["Event",""]]});
+initSidebarItems({"struct":[["PacketReceived",""]]});

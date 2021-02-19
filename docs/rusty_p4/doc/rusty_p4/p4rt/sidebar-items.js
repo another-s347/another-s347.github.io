@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["bmv2",""],["pipeconf",""],["pure",""],["stratum_bmv2",""]]});
+initSidebarItems({"mod":[["bmv2",""],["pipeconf",""],["pure",""]]});

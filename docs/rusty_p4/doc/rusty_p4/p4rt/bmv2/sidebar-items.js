@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["Bmv2Event",""],["Bmv2SwitchConnectionStatus",""]],"struct":[["Bmv2ConnectionOption",""],["Bmv2Manager",""],["Bmv2MasterUpdateOption",""],["Bmv2SwitchConnection",""]]});
+initSidebarItems({"enum":[["Bmv2Event",""],["Bmv2MasterStatus",""],["Bmv2StreamStatus",""]],"struct":[["Bmv2ConnectionOption",""],["Bmv2Manager",""],["Bmv2MasterUpdateOption",""],["Bmv2SwitchConnection","A connection to bmv2 switch using p4runtime API."]]});

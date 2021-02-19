@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Flow",""],["FlowAction",""],["FlowActionParam",""],["FlowMatch",""],["FlowTable",""]]});
+initSidebarItems({"struct":[["Flow",""],["FlowAction",""],["FlowActionParam",""],["FlowMatch",""],["FlowTable",""]],"type":[["FlowMatches",""]]});

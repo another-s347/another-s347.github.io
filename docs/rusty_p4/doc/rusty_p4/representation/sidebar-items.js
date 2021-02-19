@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["DeviceType",""]],"struct":[["ConnectPoint",""],["Device",""],["DeviceID",""],["Host",""],["Interface",""],["Link",""],["Load",""],["Port",""],["StratumLoad",""]]});
+initSidebarItems({"struct":[["ConnectPoint",""],["DeviceID",""]]});
