@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["hash",""]],"mod":[["flow",""],["publisher",""],["value",""]],"struct":[["FinishSignal",""],["SizeHintStream",""]]});
+initSidebarItems({"fn":[["hash",""]],"macro":[["smallvec","Creates a [`SmallVec`] containing the arguments."]],"mod":[["flow",""],["publisher",""],["value",""]],"struct":[["FinishSignal",""],["SizeHintStream",""],["SmallVec","A `Vec`-like container that can store a small number of elements inline."]]});
